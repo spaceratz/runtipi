@@ -1,0 +1,29 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "Open WebUI",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8080,
+  "id": "open-webui",
+  "tipi_version": 17,
+  "version": "0.6.16",
+  "categories": ["utilities"],
+  "description": "Meow",
+  "short_desc": "Open WebUI",
+  "author": "https://github.com/open-webui",
+  "source": "https://github.com/open-webui/open-webui",
+  "website": "https://github.com/open-webui/open-webui",
+  "form_fields": [
+    {
+      "type": "string",
+      "label": "Joplin DB password",
+      "max": 100,
+      "min": 8,
+      "env_variable": "OPENAI_API_KEY"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1752756574370
+}
