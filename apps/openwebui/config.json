@@ -1,5 +1,4 @@
 {
-  "$schema": "../app-info-schema.json",
   "name": "Open WebUI",
   "available": true,
   "exposable": true,
@@ -9,7 +8,7 @@
   "tipi_version": 17,
   "version": "0.6.16",
   "categories": ["utilities"],
-  "description": "Meow",
+  "description": "Open WebUI",
   "short_desc": "Open WebUI",
   "author": "https://github.com/open-webui",
   "source": "https://github.com/open-webui/open-webui",
