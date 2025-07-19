@@ -2,7 +2,7 @@
   "$schema": "../dynamic-compose-schema.json",
   "services": [
     {
-      "name": "open-webui",
+      "name": "openwebui",
       "image": "ghcr.io/open-webui/open-webui:main",
       "isMain": true,
       "internalPort": 3000,
