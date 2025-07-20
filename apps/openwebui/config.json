@@ -15,8 +15,8 @@
     {
       "type": "text",
       "label": "OpenAI API Key",
-      "max": 100,
-      "min": 8,
+      "max": 255,
+      "min": 100,
       "env_variable": "OPENAI_API_KEY"
     }
   ],
