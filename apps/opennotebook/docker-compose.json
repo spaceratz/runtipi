@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "opennotebook",
-      "image": "ghcr.io/lfnovo/open_notebook:v1-latest-single",
+      "image": "ghcr.io/lfnovo/open-notebook:v1-latest-single",
       "restart": "always",
       "isMain": true,
       "internalPort": 8502,
