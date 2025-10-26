@@ -8,6 +8,7 @@
       "internalPort": 8502,
       "environment": {
         "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "API_URL": "http://172.29.5.37:5055",
         "SURREAL_URL": "ws://localhost:8000/rpc",
         "SURREAL_USER": "root",
         "SURREAL_PASSWORD": "root",
