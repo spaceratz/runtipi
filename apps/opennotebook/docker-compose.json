@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "name": "open_notebook",
+      "name": "opennotebook",
       "image": "ghcr.io/lfnovo/open_notebook:v1-latest-single",
       "restart": "always",
       "isMain": true,

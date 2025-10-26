@@ -1,6 +1,6 @@
 {
   "name": "Open Notebook",
-  "id": "open-notebook",
+  "id": "opennotebook",
   "available": true,
   "port": 8502,
   "tipi_version": 2,
