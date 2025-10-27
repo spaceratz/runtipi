@@ -1,4 +1,6 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "openwebui",
@@ -6,9 +8,12 @@
       "restart": "always",
       "isMain": true,
       "internalPort": 8080,
-      "environment": {
-        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
-      },
+      "environment": [
+        {
+          "key": "OPENAI_API_KEY",
+          "value": "${OPENAI_API_KEY}"
+        }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/open-webui",

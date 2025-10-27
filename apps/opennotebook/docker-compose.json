@@ -1,4 +1,6 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "opennotebook",
@@ -6,15 +8,36 @@
       "restart": "always",
       "isMain": true,
       "internalPort": 8502,
-      "environment": {
-        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
-        "API_URL": "http://172.29.5.37:5055",
-        "SURREAL_URL": "ws://localhost:8000/rpc",
-        "SURREAL_USER": "root",
-        "SURREAL_PASSWORD": "root",
-        "SURREAL_NAMESPACE": "open_notebook",
-        "SURREAL_DATABASE": "production"
-      },
+      "environment": [
+        {
+          "key": "OPENAI_API_KEY",
+          "value": "${OPENAI_API_KEY}"
+        },
+        {
+          "key": "API_URL",
+          "value": "http://172.29.5.37:5055"
+        },
+        {
+          "key": "SURREAL_URL",
+          "value": "ws://localhost:8000/rpc"
+        },
+        {
+          "key": "SURREAL_USER",
+          "value": "root"
+        },
+        {
+          "key": "SURREAL_PASSWORD",
+          "value": "root"
+        },
+        {
+          "key": "SURREAL_NAMESPACE",
+          "value": "open_notebook"
+        },
+        {
+          "key": "SURREAL_DATABASE",
+          "value": "production"
+        }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/notebook_data",
