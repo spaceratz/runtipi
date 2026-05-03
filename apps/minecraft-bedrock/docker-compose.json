@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "minecraft-bedrock",
+      "image": "itzg/minecraft-bedrock-server:2026.4.4",
+      "isMain": true,
+      "tty": true,
+      "stdinOpen": true,
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/data"
+        }
+      ],
+      "addPorts": [
+        {
+          "containerPort": 19132,
+          "hostPort": 19132,
+          "udp": true
+        },
+        {
+          "containerPort": 19133,
+          "hostPort": 19133,
+          "udp": true
+        }
+      ],
+      "environment": [
+        {
+          "key": "EULA",
+          "value": "TRUE"
+        },
+        {
+          "key": "VERSION",
+          "value": "${MC_BEDROCK_VERSION}"
+        },
+        {
+          "key": "SERVER_NAME",
+          "value": "${SERVER_NAME}"
+        },
+        {
+          "key": "GAMEMODE",
+          "value": "${GAMEMODE}"
+        },
+        {
+          "key": "DIFFICULTY",
+          "value": "${DIFFICULTY}"
+        },
+        {
+          "key": "MAX_PLAYERS",
+          "value": "${MAX_PLAYERS}"
+        },
+        {
+          "key": "ALLOW_CHEATS",
+          "value": "${ALLOW_CHEATS}"
+        },
+        {
+          "key": "ONLINE_MODE",
+          "value": "true"
+        },
+        {
+          "key": "ALLOW_LIST",
+          "value": "${ALLOW_LIST}"
+        },
+        {
+          "key": "ALLOW_LIST_USERS",
+          "value": "${ALLOW_LIST_USERS}"
+        },
+        {
+          "key": "OPS",
+          "value": "${OPS}"
+        },
+        {
+          "key": "LEVEL_NAME",
+          "value": "${LEVEL_NAME}"
+        },
+        {
+          "key": "LEVEL_SEED",
+          "value": "${LEVEL_SEED}"
+        },
+        {
+          "key": "TZ",
+          "value": "Australia/Perth"
+        }
+      ]
+    }
+  ]
+}

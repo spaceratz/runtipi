@@ -1,0 +1,107 @@
+{
+  "name": "Minecraft Bedrock",
+  "id": "minecraft-bedrock",
+  "available": true,
+  "tipi_version": 1,
+  "version": "2026.4.4",
+  "categories": [
+    "gaming"
+  ],
+  "description": "Self-hosted Minecraft Bedrock Edition dedicated server. Compatible with iPad/iPhone, Android, Switch, Xbox, PlayStation, and Minecraft for Windows. Powered by the itzg/docker-minecraft-bedrock-server image, which downloads and auto-upgrades the Mojang dedicated server binary on container start. Exposes UDP 19132 (IPv4) and 19133 (IPv6).",
+  "short_desc": "Bedrock Edition server for iPad, Switch, Xbox, Win10 and mobile",
+  "author": "itzg",
+  "source": "https://github.com/itzg/docker-minecraft-bedrock-server",
+  "website": "https://www.minecraft.net/en-us/download/server/bedrock",
+  "exposable": false,
+  "no_gui": true,
+  "dynamic_config": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Server Name",
+      "env_variable": "SERVER_NAME",
+      "default": "Spaceratz Minecraft",
+      "max": 64,
+      "hint": "Shown to clients in the LAN/Friends list."
+    },
+    {
+      "type": "text",
+      "label": "Game Mode",
+      "env_variable": "GAMEMODE",
+      "default": "survival",
+      "hint": "survival | creative | adventure"
+    },
+    {
+      "type": "text",
+      "label": "Difficulty",
+      "env_variable": "DIFFICULTY",
+      "default": "easy",
+      "hint": "peaceful | easy | normal | hard"
+    },
+    {
+      "type": "number",
+      "label": "Max Players",
+      "env_variable": "MAX_PLAYERS",
+      "default": 10,
+      "min": 1,
+      "max": 30
+    },
+    {
+      "type": "boolean",
+      "label": "Allow Cheats",
+      "env_variable": "ALLOW_CHEATS",
+      "default": false,
+      "hint": "Enables /gamemode, /give, etc. for operators."
+    },
+    {
+      "type": "boolean",
+      "label": "Enable Allow List (Whitelist)",
+      "env_variable": "ALLOW_LIST",
+      "default": false,
+      "hint": "Restrict who can join. First boot with this OFF, have the kids join once, then grab their XUIDs from the server logs, add them below, and turn this ON."
+    },
+    {
+      "type": "text",
+      "label": "Allow List Users",
+      "env_variable": "ALLOW_LIST_USERS",
+      "required": false,
+      "placeholder": "kid1:1234567890,kid2:0987654321",
+      "hint": "gamertag:xuid pairs, comma-separated. XUIDs are printed in the server logs the first time each player joins."
+    },
+    {
+      "type": "text",
+      "label": "Operators (Admins)",
+      "env_variable": "OPS",
+      "required": false,
+      "placeholder": "ParentGamertag",
+      "hint": "Comma-separated gamertags or XUIDs that get operator privileges (admin commands)."
+    },
+    {
+      "type": "text",
+      "label": "Level Name",
+      "env_variable": "LEVEL_NAME",
+      "default": "Spaceratz World",
+      "hint": "World folder name under /data/worlds."
+    },
+    {
+      "type": "text",
+      "label": "Level Seed",
+      "env_variable": "LEVEL_SEED",
+      "required": false,
+      "hint": "Leave blank for a random world."
+    },
+    {
+      "type": "text",
+      "label": "Bedrock Server Version",
+      "env_variable": "MC_BEDROCK_VERSION",
+      "default": "LATEST",
+      "hint": "Use LATEST to auto-upgrade on each container start, PREVIEW for the preview channel, or pin to a specific version like 1.21.50.10."
+    }
+  ],
+  "created_at": 1777793889003,
+  "updated_at": 1777793889003
+}
